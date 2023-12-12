@@ -1,19 +1,35 @@
 # Laravel Blade Template
 ---
 
+<br>
+
 ## HTML Encoding
 
 `{{$variable}}` : Menggunakan htmlspecialchars()
+
 `{!!$variable!!}` : Tanpa htmlspecialchars()
+
+---
+
+<br>
 
 ## Disabled Blade
 
 `@{{$eko}}` : output {{$eko}}
+
 `@verbatim -- @ endverbatim`
+
+---
+
+<br>
 
 ## If Statement
 
 `@if() - @elseif() - @else() - @endif`
+
+---
+
+<br>
 
 ## Unless Statement
 
@@ -21,19 +37,37 @@ Kebalikan dari if statement. Dieksekusi apabila bernilai false
 
 `@unless($var) - @endunless`
 
+---
+
+<br>
+
 ## Isset dan Empty
 
 `@isset($var) - @endisset` : Apakah variabel ada dan tidak bernilai null
+
 `@empty($var) - @endempty` : Apakah variabel merupakan array kosong
+
+---
+
+<br>
 
 ## Env
 
 `@env("*testing") - @endenv`
+
 `@env(["*testing", "*testing2"]) - @endenv`
+
+---
+
+<br>
 
 ## Switch Statement
 
 `@switch - @case - @break - @default`
+
+---
+
+<br>
 
 ## For Loop
 
@@ -43,26 +77,51 @@ Kebalikan dari if statement. Dieksekusi apabila bernilai false
 
 `forelse() - @empty - @endforelse`
 
+---
+
+<br>
+
 ## RAW PHP
 
 `@php - @endphp`
+
+---
+
+<br>
 
 ## While Loop
 
 `@while() - @endwhile`
 
+---
+
+<br>
+
 ## Loop Variable
 
 `@loop->index`
+
 `@loop->iteration`
+
 `@loop->remaining`
+
 `@loop->count`
+
 `@loop->first`
+
 `@loop->last`
+
 `@loop->even`
+
 `@loop->odd`
+
 `@loop->depth`
+
 `@loop->parent`
+
+---
+
+<br>
 
 ## CSS Class
 
@@ -86,15 +145,29 @@ Kebalikan dari if statement. Dieksekusi apabila bernilai false
 </body>
 ```
 
+---
+
+<br>
+
 ## Include
 
 `@include('*namefile')`
+
 `@include("header", ["title" => "Home Page"])`
+
+---
+
+<br>
 
 ## Include
 
 `@includeWhen($user['owner'], 'header-admin')` : Kondisi true
+
 `@includeUnless($user['owner'], 'header-admin')` : Kondisi false
+
+---
+
+<br>
 
 ## Each dan Once
 
@@ -123,12 +196,20 @@ Kebalikan dari if statement. Dieksekusi apabila bernilai false
 </body>
 ```
 
+---
+
+<br>
+
 ## Form
 
 `@checked(kondisi)`
+
 `@selected(kondisi)`
+
 `@disabled(kondisi)`
+
 `@readonly(kondisi)`
+
 `@required(kondisi)`
 
 ```
@@ -136,7 +217,15 @@ Kebalikan dari if statement. Dieksekusi apabila bernilai false
 <input type="text" value="{{$user['name']}}" @readonly(!$user['admin'])/> <br/>
 ```
 
+---
+
+<br>
+
 ## CSRF
+
+---
+
+<br>
 
 ## Error
 
@@ -145,6 +234,10 @@ Kebalikan dari if statement. Dieksekusi apabila bernilai false
 <p>{{$message}}</p>
 @enderror
 ```
+
+---
+
+<br>
 
 ## Stack
 
@@ -163,6 +256,10 @@ Kebalikan dari if statement. Dieksekusi apabila bernilai false
 
 @stack("script")
 ```
+
+---
+
+<br>
 
 ## Template Inheritance
 
@@ -183,6 +280,7 @@ Kebalikan dari if statement. Dieksekusi apabila bernilai false
 ```
 
 Show Directive
+
 ```
 // Parent Layout
 @yield("title")
@@ -209,6 +307,10 @@ Show Directive
 @endsection
 ```
 
+---
+
+<br>
+
 ## Service Injection
 
 `@inject(variable, service)` : Untuk mengambil object dari Service Container
@@ -218,13 +320,30 @@ Show Directive
 <h1>{{ $service->sayHello($name)  }}</h1>
 ```
 
+---
+
+<br>
+
 ## Optimizing Template
 
 `php artisan view:cache`
+
 `php artisan view:clear`
+
+---
+
+<br>
 
 ## Inline Blade Template
 
+---
+
+<br>
+
 ## Extending Blade
+
+---
+
+<br>
 
 ## Custom Echo Handler
